@@ -57,35 +57,37 @@
       <guid>https://resugary.github.io/hugo-theme-one/posts/syntax-highlighting-preview/</guid>
       <description>&lt;p&gt;Hugo comes with really fast syntax highlighting from Chroma and provides a &lt;a href=&#34;https://xyproto.github.io/splash/docs/all.html&#34;&gt;Chroma style gallery&lt;/a&gt;. You can configure syntax highlighter in the &lt;code&gt;config.toml&lt;/code&gt; file. The theme one uses the pygments style color style.&lt;/p&gt;
 
-&lt;p&gt;CSS&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;@&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;font-face&lt;/span&gt; {
-  &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;font-family&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;Chunkfive&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;Chunkfive.otf&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;);&lt;/span&gt;
-}
+&lt;p&gt;Chroma demo below:&lt;/p&gt;
 
-&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;,&lt;/span&gt; .&lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;usertext&lt;/span&gt; {
-  &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#666&#34;&gt;#F0F0F0&lt;/span&gt;; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;background&lt;/span&gt;: &lt;span style=&#34;color:#666&#34;&gt;#600&lt;/span&gt;;
-  &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;font-family&lt;/span&gt;: Chunkfive, sans;
-}
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#bc7a00&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span style=&#34;color:#bc7a00&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#408080;font-style:italic&#34;&gt;###### CONFIG
+&lt;/span&gt;&lt;span style=&#34;color:#408080;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#19177c&#34;&gt;ACCEPTED_HOSTS&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#34;/root/.hag_accepted.conf&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#19177c&#34;&gt;BE_VERBOSE&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#008000&#34;&gt;false&lt;/span&gt;
 
-@&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;print&lt;/span&gt;.&lt;span style=&#34;color:#00f;font-weight:bold&#34;&gt;css&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;)&lt;/span&gt;;
-@&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;media&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;print&lt;/span&gt; {
-  &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;^=&lt;/span&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;]&lt;/span&gt;::&lt;span style=&#34;color:#a2f&#34;&gt;after&lt;/span&gt; {
-    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;content&lt;/span&gt;: &lt;span style=&#34;color:#008000&#34;&gt;attr&lt;/span&gt;(href)
-  }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#19177c&#34;&gt;$UID&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#34;&lt;/span&gt; -ne &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;then&lt;/span&gt;
+    &lt;span style=&#34;color:#008000&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#34;Superuser rights required&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#008000&#34;&gt;exit&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;2&lt;/span&gt;
+&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;fi&lt;/span&gt;
+
+genApacheConf&lt;span style=&#34;color:#666&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#008000&#34;&gt;echo&lt;/span&gt; -e &lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#34;# Host &lt;/span&gt;&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#19177c&#34;&gt;HOME_DIR&lt;/span&gt;&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#19177c&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#19177c&#34;&gt;$2&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt; :&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#666&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;JavaScript&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;function&lt;/span&gt; $initHighlight(block, cls) {
-  &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;try&lt;/span&gt; {
-    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; (cls.search(&lt;span style=&#34;color:#b68&#34;&gt;/\bno\-highlight\b/&lt;/span&gt;) &lt;span style=&#34;color:#666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;)
-      &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;return&lt;/span&gt; process(block, &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;true&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;0x0F&lt;/span&gt;) &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt;
-             &lt;span style=&#34;color:#ba2121&#34;&gt;` class=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;${&lt;/span&gt;cls&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#34;`&lt;/span&gt;;
-  } &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;catch&lt;/span&gt; (e) {
-    &lt;span style=&#34;color:#408080;font-style:italic&#34;&gt;/* handle exception */&lt;/span&gt;
-  }
-  &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;var&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;&#34;&gt;/ 2; i &amp;lt; classes.length; i++) {&lt;/span&gt;
-    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; (checkCondition(classes[i]) &lt;span style=&#34;color:#666&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;undefined&lt;/span&gt;)
-      console.log(&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;undefined&amp;#39;&lt;/span&gt;);
-  }
+
+    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;try&lt;/span&gt; {
+        &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; (cls.search(&lt;span style=&#34;color:#b68&#34;&gt;/\bno\-highlight\b/&lt;/span&gt;) &lt;span style=&#34;color:#666&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;1&lt;/span&gt;)
+        &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;return&lt;/span&gt; process(block, &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;true&lt;/span&gt;, &lt;span style=&#34;color:#666&#34;&gt;0x0F&lt;/span&gt;) &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ba2121&#34;&gt;` class=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;${&lt;/span&gt;cls&lt;span style=&#34;color:#b68;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#34;`&lt;/span&gt;;
+    } &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;catch&lt;/span&gt; (e) {
+        &lt;span style=&#34;color:#408080;font-style:italic&#34;&gt;/* handle exception */&lt;/span&gt;
+    }
+    &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;var&lt;/span&gt; i &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;&#34;&gt;/ 2; i &amp;lt; classes.length; i++) {&lt;/span&gt;
+        &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; (checkCondition(classes[i]) &lt;span style=&#34;color:#666&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;undefined&lt;/span&gt;)
+        console.log(&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;undefined&amp;#39;&lt;/span&gt;);
+    }
 }
 
 &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;export&lt;/span&gt;  $initHighlight;
@@ -93,6 +95,7 @@
 &lt;p&gt;Python&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#a2f&#34;&gt;@requires_authorization&lt;/span&gt;
 &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#00f&#34;&gt;somefunc&lt;/span&gt;(param1&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;, param2&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;0&lt;/span&gt;):
+
     &lt;span style=&#34;color:#ba2121&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;&amp;#39;&amp;#39;A docstring&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
     &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;if&lt;/span&gt; param1 &lt;span style=&#34;color:#666&#34;&gt;&amp;gt;&lt;/span&gt; param2: &lt;span style=&#34;color:#408080;font-style:italic&#34;&gt;# interesting&lt;/span&gt;
         &lt;span style=&#34;color:#008000;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#ba2121&#34;&gt;&amp;#39;Gre&lt;/span&gt;&lt;span style=&#34;color:#b62;font-weight:bold&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ba2121&#34;&gt;ater&amp;#39;&lt;/span&gt;

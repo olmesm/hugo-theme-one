@@ -1,14 +1,15 @@
 One
 ===========
 
-[One](https://github.com/resugary/hugo-theme-one) is a minimal blog theme for Hugo, which is forked from [onetwothree](https://github.com/schollz/onetwothree). Check out the demo at https://resugary.github.io/hugo-theme-one.
+[One](https://github.com/resugary/hugo-theme-one) is a mininal blog theme for [Hugo](https://gohugo.io/), which is forked from [onetwothree](https://github.com/schollz/onetwothree). It provides some new features and simplification. I tried to keep it simple with less configuration to write rather than play with a theme instead.
+
+You can check out the demo at https://resugary.github.io/hugo-theme-one.
 
 ![Screenshot](https://github.com/resugary/hugo-theme-one/blob/master/images/screenshot.png)
 
-The theme one provides some new features, style update and simplifications from original onetwothree. I tried to keep it minimal with less configuration to write rather than play with a theme instead.
-
 Features:  
-- Add archives support for all posts  
+- Add posts archive support  
+- Add syntax highlighting using Chroma  
 - Add Google Analytics support  
 - Add Full-text RSS support
 
@@ -17,18 +18,12 @@ Features:
 Clone this repository to your hugo theme directory:
 
 ```
-git clone https://github.com/resugary/hugo-theme-one.git themes/one
-```
-
-Preview with hugo commands:
-
-```
-hugo server -t one
+git clone --depth=1 https://github.com/resugary/hugo-theme-one.git themes/one
 ```
 
 ## Create New Posts
 
-Posts should generally go under a `content/posts` directory, you may start like this:
+Posts should generally go under the `content/posts` directory, you may start like this:
 
 ```
 hugo new posts/hello.md
@@ -47,9 +42,11 @@ To enable Archives, you should create a new file called `archives.md`:
 ```
 hugo new archives.md
 
-# then add the following line in the front matter
+# then add the following line in the front matter of archives.md
 type: "archives"
 ```
+
+Take a look inside the [exampleSite](https://github.com/resugary/hugo-theme-one/tree/master/exampleSite) folder if you get stuck.
 
 ## Configuration
 
@@ -64,17 +61,16 @@ title = "My Hugo Site"
 theme = "one"
 googleAnalytics = "UA-123-45"
 
-# Chroma Syntax Highlighting
+# Chroma syntax highlighting
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "pygments"
 
+# Custom navigation bar
 [params]
     navigation = ["archives.md", "about.md"]
 
 ```
-
-Feel free to change the strings in this theme.
 
 ## License
 

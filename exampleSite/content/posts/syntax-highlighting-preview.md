@@ -5,25 +5,26 @@ tags: ["example","code"]
 draft: false
 ---
 
-Hugo comes with really fast syntax highlighting from Chroma and provides a [Chroma style gallery](https://xyproto.github.io/splash/docs/all.html). You can configure syntax highlighter in the `config.toml` file. The theme one uses the pygments style color style. 
+Hugo comes with really fast syntax highlighting from Chroma and provides a [Chroma style gallery](https://xyproto.github.io/splash/docs/all.html). You can configure syntax highlighter in the `config.toml` file. The theme one uses the pygments style color style.  
 
-CSS
+Chroma demo below:
 
-```css
-@font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
-}
+Bash
+```bash
+#!/bin/bash
 
-body, .usertext {
-  color: #F0F0F0; background: #600;
-  font-family: Chunkfive, sans;
-}
+###### CONFIG
+ACCEPTED_HOSTS="/root/.hag_accepted.conf"
+BE_VERBOSE=false
 
-@import url(print.css);
-@media print {
-  a[href^=http]::after {
-    content: attr(href)
-  }
+if [ "$UID" -ne 0 ]
+then
+    echo "Superuser rights required"
+    exit 2
+fi
+
+genApacheConf() {
+    echo -e "# Host ${HOME_DIR}$1/$2 :"
 }
 ```
 
@@ -31,17 +32,17 @@ JavaScript
 
 ```javascript
 function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-             ` class="${cls}"`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
+
+    try {
+        if (cls.search(/\bno\-highlight\b/) != -1)
+        return process(block, true, 0x0F) + ` class="${cls}"`;
+    } catch (e) {
+        /* handle exception */
+    }
+    for (var i = 0 / 2; i < classes.length; i++) {
+        if (checkCondition(classes[i]) === undefined)
+        console.log('undefined');
+    }
 }
 
 export  $initHighlight;
@@ -52,6 +53,7 @@ Python
 ```python
 @requires_authorization
 def somefunc(param1='', param2=0):
+
     r'''A docstring'''
     if param1 > param2: # interesting
         print 'Gre\'ater'

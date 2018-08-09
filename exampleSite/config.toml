@@ -6,11 +6,12 @@ title = "Hugo Theme One"
 theme = "one"
 googleAnalytics = "UA-123-45"
 
-# Chroma Syntax Highlighting
+# Chroma syntax highlighting
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "pygments"
 
+# Custom navigation bar
 [params]
     navigation = ["archives.md", "about.md"]
 
